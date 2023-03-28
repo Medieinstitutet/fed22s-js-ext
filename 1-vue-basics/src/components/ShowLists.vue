@@ -10,11 +10,11 @@ let persons: Person[] = [
 ];
 </script>
 <template>
-  <!-- <div v-for="person in persons" :key="person.name">
+  <div v-for="person in persons.filter((p) => p.age > 20)" :key="person.name">
     <h3>{{ person.name }}</h3>
     <p>{{ person.age }}</p>
     <input type="checkbox" :checked="person.isMarried" />
-  </div> -->
+  </div>
 
-  <ShowPerson v-for="person in persons"></ShowPerson>
+  <!-- <ShowPerson v-for="person in persons"></ShowPerson> -->
 </template>
