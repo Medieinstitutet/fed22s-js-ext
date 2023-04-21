@@ -1,4 +1,4 @@
-import { IMovie } from "./IMovie.js";
+import { IMovie } from "./IMovie";
 
 export interface IOmdbResponse {
   Search: IMovie[];

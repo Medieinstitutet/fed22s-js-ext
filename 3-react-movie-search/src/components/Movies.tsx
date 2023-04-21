@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ChangeEvent, useState } from "react";
-import { IMovie } from "../models/IMovie.js";
-import { IOmdbResponse } from "../models/IOmdbResponse.js";
+import { IMovie } from "../models/IMovie";
+import { IOmdbResponse } from "../models/IOmdbResponse";
 
 export const Movies = () => {
   const [movies, setMovies] = useState<IMovie[]>([]);

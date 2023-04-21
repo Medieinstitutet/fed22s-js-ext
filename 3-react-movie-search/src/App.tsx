@@ -1,5 +1,5 @@
 import "./App.css";
-import { Movies } from "./components/Movies.js";
+import { Movies } from "./components/Movies";
 
 function App() {
   return (
