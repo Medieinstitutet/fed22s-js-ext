@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider } from "react-router";
 import { createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Error } from "./pages/Error";
 import { About } from "./pages/About";
-import { SuperheroList, superheroLoader } from "./pages/SuperheroList";
+import { SuperheroList } from "./pages/SuperheroList";
 import { SuperheroView } from "./pages/SuperHeroView";
+import { superheroLoader } from "./loaders/superheroLoader";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -28,6 +28,8 @@ const router = createBrowserRouter([
   {
     path: "/superheroes",
     element: <SuperheroList></SuperheroList>,
+    children: [],
+    loader: superheroLoader,
   },
   {
     path: "/superheroes/:id",
