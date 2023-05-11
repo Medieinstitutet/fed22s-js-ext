@@ -1,5 +1,6 @@
 import { ChangeEvent, FormEvent, useContext, useState } from "react";
 import { TodosContext } from "../contexts/TodosContext";
+import { Button } from "./Button";
 
 export const AddTodo = () => {
   const { add } = useContext(TodosContext);
@@ -21,7 +22,13 @@ export const AddTodo = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" value={userInput} onChange={handleChange} />
-      <button>Spara</button>
+      <Button
+        handleClick={() => {
+          return;
+        }}
+      >
+        <>Spara</>
+      </Button>
     </form>
   );
 };
