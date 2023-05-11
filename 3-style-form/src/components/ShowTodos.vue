@@ -39,7 +39,7 @@ const removeTodo = (i: number) => {
   </ul>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 ul {
   list-style: none;
   padding: 0;
@@ -47,11 +47,11 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-.todo {
-}
 
-.todo.done {
-  text-decoration: line-through;
+  .todo {
+    &.done {
+      text-decoration: line-through;
+    }
+  }
 }
 </style>
